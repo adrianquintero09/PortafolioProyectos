@@ -1,0 +1,93 @@
+
+.Container{
+    border: 3px solid #7C3AED;         
+    background-color: #FFFFFF;
+    height: 620px;
+    width: 800px;
+    margin-left: 350px ;
+    margin-top: 50px;
+    box-shadow: 10px;
+}
+
+
+
+.Box-Nombre { 
+    background-color: #7C3AED;          
+    color: white;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    margin-top: 10px;
+    width: 500px;
+    margin-left: 10px;
+    text-align: center;
+    border-radius: 30px;
+}
+
+body{
+    background-color: #FAFAFA;         
+    color: #111827;
+}
+
+    .Box-Contacto{
+        background-color: #7C3AED;          
+        color: white;
+        margin-left: 10px;
+        width: 500px;
+        text-align: center;
+        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+         border-radius: 10px;
+    }
+
+
+.Box-Certificados{
+    background-color: #7C3AED;          
+    color: white;
+    height: 300px;
+    width: 500px;
+    margin-left: 15px;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    text-align: center;
+    border-radius: 20px;
+
+}
+
+
+
+    .Certificado{
+        height: 200px;
+    
+
+    }
+
+.Box-Xp{
+    background-color: #7C3AED;          
+    color: white;
+    margin-left: 15px;
+    border-radius: 20px;
+    width: 500px;
+    height: 50px;
+    text-align: center;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+
+.Box-Educacion{
+    background-color: #7C3AED;          
+    color: white;
+    margin-left: 15px;
+    border-radius: 20px;
+    width: 500px;
+    height: 30px;
+    text-align: center;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+
+.Box-Redes{
+    background-color: #7C3AED;          
+    color: white;
+    height: 325px;
+    width: 240px;
+    border-radius: 20px;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
