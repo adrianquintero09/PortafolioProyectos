@@ -13,13 +13,13 @@ body {
 .logo {
     float: left;
     margin: 0;
-    margin-left: 30px;
+    margin-left: 70px;
 }
 
 .navegacion {
     float: right;
     margin: 0;
-    margin-right: 40px;
+    margin-right: 70px;
 }
 
 .navegacion li {
@@ -60,7 +60,7 @@ body {
 }
 
 .texto button {
-    background: #ab13f2;         
+    background: #ab13f2;       
     color: white;
     border: none;
     padding: 10px 20px;
@@ -71,18 +71,17 @@ body {
     background: #da08ff;          
     color: white;
     text-align: center;
-    padding: 80px;
+    padding: 50px;
 }
 
 .foto {
-    width: 180px;
-    border-radius: 100px;
+    width: 250px;
+    border-radius: 150px;
 }
 
 .proyectos {
     text-align: center;
     padding: 60px;
-    background: #f2f2f2;
 }
 
 .contenedor-proyectos {
@@ -93,11 +92,11 @@ body {
 
 .tarjeta {
     width: 20%;
+    height: 500px;
     float: left;
-    margin: 1%;
+    margin: 30px;
     background: white;
     border: 1px solid #ccc;
-    padding: 15px;
     text-align: center;
     box-sizing: border-box;
 }
@@ -130,5 +129,5 @@ body {
     color: white;
     padding: 20px;
     margin-top: 40px;
-    width: 100%;
 }
+
