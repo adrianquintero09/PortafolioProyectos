@@ -19,7 +19,7 @@ body {
 .navegacion {
     float: right;
     margin: 0;
-    margin-right: 70px;
+    margin-right: 100px;
 }
 
 .navegacion li {
@@ -92,7 +92,7 @@ body {
 
 .tarjeta {
     width: 20%;
-    height: 500px;
+    height: 370px;
     float: left;
     margin: 30px;
     background: white;
