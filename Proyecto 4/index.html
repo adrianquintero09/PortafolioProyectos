@@ -1,178 +1,209 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Factura - Z Company</title>
+  <title>Factura</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-
-  <div class="main-wrapper">
-
-    <!-- ENCABEZADO -->
-    <div class="encabezado">
-      <div class="header-left">
-        <div class="img_header">
-        </div>
-        <div class="headerA">
-          <h2>Z COMPANY</h2>
-          <p>COMPANY TAGLINE HERE</p>
-        </div>
+  <div class="page">
+    <!-- Cabeza de la pagina -->
+    <header>
+      <div class="header-box-left">
+        <img src="./zCompany.png" alt="logo_compañia">
       </div>
-
-      <div class="headerB">
-        <h1>INVOICE</h1>
-        <div class="factura-info">
-          <div class="factura-row">
-            <span class="factura-label">Invoice Number:</span>
-            <span class="factura-value">#F123456</span>
-          </div>
-          <div class="factura-row">
-            <span class="factura-label">Account No:</span>
-            <span class="factura-value">1234 5678 9101</span>
-          </div>
-          <div class="factura-row">
-            <span class="factura-label">Invoice Date:</span>
-            <span class="factura-value">April 05, 2020</span>
+      <div class="header-box-right">
+          <img class="Imagen2" src="./zCompany2.png.jpeg" alt="zCompany2">
+        <div class="Box-container">
+          <h1 class="text1">INVOICE</h1>
+          <div class="info-factura">
+            <div class="Factura-box">
+              <span class="Factura1">Invoice Number:</span>
+              <span class="Factura2">#123456</span>
+            </div>
+            <div class="Factura-box">
+              <span style="margin-left: 5px;" class="Factura1">Account No:</span>
+              <span class="Factura2">1234 5678 9086</span>
+            </div>
+            <div class="Factura-box">
+              <span class="Factura1">Invoice Date:</span>
+              <span class="Factura2">April 05 2020</span>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </header>
+    <!-- Seccion principal de la pagina -->
 
-    <!-- CUERPO -->
-    <div class="cuerpo-factura">
-
-      <div class="invoice-info">
-        <!-- Invoice To -->
-        <div class="invoice-to">
-          <h3 class="orange-title">INVOICE TO:</h3>
+    <main class="cuerpo-factura">
+      <div class="info-factura2">
+        <div class="informacion1">
+          <h2 class="text2">Invoice to:</h2>
           <h1>Jhone Doe.</h1>
-          <p>Managing Director, Company Ltd.</p>
-          <p>Phone: +123 4567 8910</p>
-          <p>Email: example@mail.com</p>
+          <p>Managing Director, Company ltd</p>
+          <p>Phone:+12345678910</p>
+          <p>Email:example.com</p>
         </div>
+        <div class="metodo-pago">
+          <h2 class="text3">Payment Method</h2>
+          <div class="metodopago2">
+            <span class="info1">Account No:</span>
+            <span class="info2">12345678910</span>
+          </div>
+          <div class="metodopago2">
+            <span class="info1">Account Name:</span>
+            <span class="info2">Jhone Doe</span>
+          </div>
+          <div class="metodopago2">
+            <span class="info1">Branch Name:</span>
+            <span class="info2">XYZ</span>
+          </div>
+        </div>
+        <section class="tablas-factura1">
+          <table>
+            <thead class="tablas-factura2">
+              <tr>
+                <th class="Date">Date</th>
+                <th class="Descripcion">Item-description</th>
+                <th class="Precio">Price</th>
+                <th class="Cantidad">QTY</th>
+                <th class="Total">Total</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="tablas-factura3">
+                <td>Jan 10 2020</td>
+                <td>Bunisess Card Design</td>
+                <td>$300</td>
+                <td>2</td>
+                <td>$600.000</td>
+              </tr class="tablas-factura3">
+              <tr>
+                <td>Jan 10 2020</td>
+                <td>Bunisess Card Design</td>
+                <td>$300</td>
+                <td>2</td>
+                <td>$600.000</td>
+              </tr class="tablas-factura3">
+              <tr>
+                <td>Jan 10 2020</td>
+                <td>Bunisess Card Design</td>
+                <td>$300</td>
+                <td>2</td>
+                <td>$600.000</td>
+              </tr class="tablas-factura3">
+              <tr>
+                <td>Jan 10 2020</td>
+                <td>Bunisess Card Design</td>
+                <td>$300</td>
+                <td>2</td>
+                <td>$600.000</td>
+              </tr class="tablas-factura3">
+              <tr>
+                <td>Jan 10 2020</td>
+                <td>Bunisess Card Design</td>
+                <td>$300</td>
+                <td>2</td>
+                <td>$600.000</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td>
+                  Subtotal:
+                </td>
+                <td>
 
-        <!-- Payment Method -->
-        <div class="payment-method">
-          <h3 class="orange-title">Payment Method</h3>
-          <div class="payment-row">
-            <span class="pay-label">Account No:</span>
-            <span class="pay-value">1234 5678 910</span>
-          </div>
-          <div class="payment-row">
-            <span class="pay-label">Account Name:</span>
-            <span class="pay-value">Jhone Doe</span>
-          </div>
-          <div class="payment-row">
-            <span class="pay-label">Branch Name:</span>
-            <span class="pay-value">XYZ</span>
-          </div>
+                </td>
+                <td>
+
+                </td>
+                <td>
+
+                </td>
+                <td>
+                  $3150.000
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Discount:
+                </td>
+                <td>
+
+                </td>
+                <td>
+
+                </td>
+                <td>
+
+                </td>
+                <td>
+                  000
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Tax(10%):
+                </td>
+                <td>
+
+                </td>
+                <td>
+
+                </td>
+                <td>
+
+                </td>
+                <td>
+                  $3150.000
+                </td>
+              </tr>
+              <tr class="Total2">
+                <td>
+                  Total
+                </td>
+                <td>
+
+                </td>
+                <td>
+
+                </td>
+                <td>
+
+                </td>
+                <td>
+                  $3465.00
+                </td>
+              </tr>
+            </tfoot>
+
+          </table>
+        </section>
+      </div>
+    </main>
+    <!-- Footer de la pagina-->
+    <footer>
+      <div class="Box-container2">
+        <div class="Terms-and-conditions">
+          <h3 class="text4">Terms & conditions:</h3>
+          <p class="text5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
+        </div>
+        <div class="Your-name-signature">
+          <p>________________________</p>
+            <h3>Your name signature</h3>
+            <p class="text6">Account Manager</p>
+            <img style=" margin-top: 50px;
+    height: 50px;
+    margin-left: -750px;" src="./zCompany3.png.jpeg" alt="zCompany3">
+            <div class="black-figure">1</div>
         </div>
       </div>
-
-      <!-- Tabla -->
-      <table class="invoice-table">
-        <thead>
-          <tr>
-            <th class="col-date">DATE</th>
-            <th class="col-desc">ITEM DESCRIPTION</th>
-            <th class="col-price text-right">PRICE</th>
-            <th class="col-qty text-center">QTY</th>
-            <th class="col-total text-right">TOTAL</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Jan 10, 2020</td>
-            <td>Businesscard Design</td>
-            <td class="text-right">$300</td>
-            <td class="text-center">2</td>
-            <td class="text-right">$600.00</td>
-          </tr>
-          <tr>
-            <td>Jan 10, 2020</td>
-            <td>Fruit Flyer Design</td>
-            <td class="text-right">$455</td>
-            <td class="text-center">1</td>
-            <td class="text-right">$450.00</td>
-          </tr>
-          <tr>
-            <td>Jan 10, 2020</td>
-            <td>Application Interface Design</td>
-            <td class="text-right">$300</td>
-            <td class="text-center">1</td>
-            <td class="text-right">$300.00</td>
-          </tr>
-          <tr>
-            <td>Jan 9, 2020</td>
-            <td>Theme Development</td>
-            <td class="text-right">$150</td>
-            <td class="text-center">3</td>
-            <td class="text-right">$450.00</td>
-          </tr>
-          <tr>
-            <td>Jan 9, 2020</td>
-            <td>Full Branding Design</td>
-            <td class="text-right">$150</td>
-            <td class="text-center">1</td>
-            <td class="text-right">$150.00</td>
-          </tr>
-          <tr>
-            <td>Jan 8, 2020</td>
-            <td>Creative Logo Design</td>
-            <td class="text-right">$200</td>
-            <td class="text-center">1</td>
-            <td class="text-right">$200.00</td>
-          </tr>
-        </tbody>
-      </table>
-
-      <!-- Resumen -->
-      <div class="invoice-summary">
-        <div class="summary-box">
-          <div class="summary-row">
-            <span class="summary-label">Subtotal:</span>
-            <span>$3,150.00</span>
-          </div>
-          <div class="summary-row">
-            <span class="summary-label">Discount:</span>
-            <span>$0.00</span>
-          </div>
-          <div class="summary-row">
-            <span class="summary-label">Tax (10%):</span>
-            <span>$315.00</span>
-          </div>
-          <div class="total-bar">
-            <span>Total:</span>
-            <span class="total-amount">$3,465.00</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Footer -->
-      <div class="invoice-footer">
-        <div class="terms-conditions">
-          <h3 class="black-title">Terms & Conditions:</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        </div>
-
-        <div class="signature-box">
-          <div class="signature-line"></div>
-          <p>Your Name & Signature</p>
-          <p style="font-size:12px; margin-top:5px; color:#666;">Account Manager</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Footer Decorativo -->
-    <div class="footer-decoration">
-      <div class="footer-orange"></div>
-      <div class="footer-white"></div>
-      <div class="footer-black"></div>
-    </div>
-
+    </footer>
   </div>
-
 </body>
+
 </html>
