@@ -132,3 +132,104 @@ body {
     margin-top: 40px;
 }
 
+
+@media screen and (max-width: 1024px) {
+    .logo {
+        margin-left: 50px;
+    }
+
+    .navegacion {
+        margin-right: 50px;
+    }
+
+    .principal {
+        padding: 20px;
+    }
+
+    .imagen, .texto {
+        width: 100%;
+        float: none;
+        text-align: center;
+    }
+
+    .imagen img {
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
+
+    .texto h1 {
+        font-size: 40px;
+    }
+
+    .texto p {
+        font-size: 18px;
+    }
+
+    .tarjeta {
+        width: 45%;
+        margin: 20px 2.5%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .menu {
+        padding: 15px;
+    }
+
+    .logo {
+        margin-left: 20px;
+        float: none;
+        text-align: center;
+    }
+
+    .navegacion {
+        margin-right: 0;
+        float: none;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .navegacion li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .texto h1 {
+        font-size: 32px;
+    }
+
+    .tarjeta {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    .sobre-mi p {
+        font-size: 20px;
+    }
+
+    .sobre-mi img.foto {
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .texto h1 {
+        font-size: 28px;
+    }
+
+    .texto p {
+        font-size: 16px;
+    }
+
+    .sobre-mi p {
+        font-size: 18px;
+    }
+
+    .sobre-mi img.foto {
+        width: 150px;
+    }
+
+    .tarjeta p {
+        font-size: 14px;
+    }
+}

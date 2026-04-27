@@ -10,7 +10,6 @@
 }
 
 body{
-    padding: 40px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -135,8 +134,8 @@ header {
 }
 
 .metodo-pago{
-    margin-top: -90px;
-    margin-left: 700px;
+   margin-right: 50px;
+   margin-top: 50px;
 }
 
 
@@ -150,7 +149,6 @@ header {
 
 
 .tablas-factura1{
-    height: 50px;
     margin-top: 50px;
     background-color: orange;
 }
@@ -241,6 +239,11 @@ tbody td:nth-child(2){
     text-align: left;
 }
 
+tfoot tr{
+    background-color: white;
+  
+}
+
 tfoot .Total2 td{
     background-color: orange;
     padding: 15px;
@@ -248,6 +251,7 @@ tfoot .Total2 td{
     font-weight: 600;
     border-right:none;
 }
+
 
 tfoot tr:nth-child(1) td{
     padding-top: 30px;
@@ -262,12 +266,14 @@ tfoot tr td{
 }
 
 
+    .Box-container2{
+        display: flex;
+        justify-content: space-between;
+    }
 
 
 .Terms-and-conditions{
     width: 60%;
-    height: 100px;
-    margin-top: 499px;
     background-color: rgb(255, 255, 255);
 }
 
@@ -282,8 +288,7 @@ tfoot tr td{
 
 
 .Your-name-signature{
-    margin-left: 750px;
-    margin-top:  -50px;
+    
 }
 
 
@@ -299,7 +304,7 @@ tfoot tr td{
     margin-left: -535px;
     height: 35px;
     margin-top: -60px;
-    transform: rotate(305deg);
+    transform:rotate(305deg) translate(-23px, 3px);
 }
 
 
@@ -313,14 +318,17 @@ tfoot tr td{
 
 .black-figure2{
     background-color: #080808;
-    margin-top: 54px;
+    margin-top: 70px;
     height: 50px;
     margin-left: -500px;
     width: 750px;
 }
 
 
-
+.informacion-box{
+    display: flex;
+    justify-content: space-between;
+}
 
 @media (max-width: 1086px){
   header{
@@ -328,6 +336,13 @@ tfoot tr td{
         
     }
 
+    .informacion-box{
+        flex-direction: column;
+    }
+
+    .header-box-left{
+        justify-content: center;
+    }
 
     .franja-naranja{
         width: 100%;
@@ -335,25 +350,46 @@ tfoot tr td{
 
     .Box-container{
         margin-left: 400px;
-        margin-top: -50px;
+        
+    }
 
 
+
+
+    .text1{
+        font-size: 2rem;
+        margin: 1px 0px 7px 40px;
+    }
+
+    .info-factura{
+        margin: 0;
+    }
+
+    .Box-container2{
+        flex-direction: column;
+        gap:30px ;
+    }
+
+
+    .Terms-and-conditions{
+        width: 100%;
+        padding-right: 30px;
     }
 
     .informacion1{
         display: grid;
-        margin-top: 270px;
+        margin-top: 170px;
     }
 
 
     .metodo-pago{
-        margin-left: 600px;
+        margin-left: 40px;
     }
 
 
 
     .Your-name-signature{
-        margin-left: 640px;
+        
     }
 
     .figures{
@@ -374,11 +410,11 @@ tfoot tr td{
     }
 
     .metodo-pago{
-        margin-left: 560px;
+       
     }
 
     .Your-name-signature{
-        margin-left: 600px;
+       margin-left: 30px;
     }
 
     .orange-figure{
