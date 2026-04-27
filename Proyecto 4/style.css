@@ -23,6 +23,15 @@ body{
 
 }
 
+.franja-blanca2{
+    background-color: white;
+    height: 30px;
+    width: 100px;
+    margin-left: 130px; 
+    margin-top: -30px;
+}
+
+
 .franja-naranja{
     background-color: orange;
     width: 300px;
@@ -45,7 +54,7 @@ body{
 
 
 .Box-container{
-    margin-top: -30px;
+    margin-top: -40px;
 }
 
 .header-box-left{
@@ -73,7 +82,7 @@ header {
 }
 
 .text1{
-    margin-left: 190px;
+    margin-left: 205px;
     color: orange;
     font-size: 3rem;
     text-transform: uppercase;
@@ -87,14 +96,28 @@ header {
     color: gray;
 }
 
+.informacion1{
+     margin-left: 40px;
+     display: grid;
+     justify-content: left;
+}
+
+.informacion1 p{
+    margin-bottom: 8px;
+}
+
+
 
 .info-factura{
-    margin-left: 150px;
+    margin-left: 170px;
 }
 
 .Factura-box{
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    text-align: left;
+    margin-left: 40px;
+    margin-bottom: 3px;
 }
 
 .div-white{
@@ -112,12 +135,17 @@ header {
 }
 
 .metodo-pago{
-    margin-top: -100px;
-    margin-left: 800px;
+    margin-top: -90px;
+    margin-left: 700px;
 }
+
+
+
 
 .text3{
     color: orange;
+    font-size: 1rem;
+    margin-bottom: 10px;
 }
 
 
@@ -263,11 +291,100 @@ tfoot tr td{
     margin-left: 20px;
 }
 
-.black-figure{
+
+
+.white-figure{
+    background-color: white;
+    width: 100px;
+    margin-left: -535px;
+    height: 35px;
+    margin-top: -60px;
+    transform: rotate(305deg);
+}
+
+
+.orange-figure{
+    background-color: orange;
+    height: 40px;
+    width: 260px;
+    margin-left: -750px;
+    margin-top: -25px;
+}
+
+.black-figure2{
     background-color: #080808;
-    margin-top: -54px;
+    margin-top: 54px;
     height: 50px;
     margin-left: -500px;
+    width: 750px;
+}
+
+
+
+
+@media (max-width: 1086px){
+  header{
+        display: grid;
+        
+    }
+
+
+    .franja-naranja{
+        width: 100%;
+    }
+
+    .Box-container{
+        margin-left: 400px;
+        margin-top: -50px;
+
+
+    }
+
+    .informacion1{
+        display: grid;
+        margin-top: 270px;
+    }
+
+
+    .metodo-pago{
+        margin-left: 600px;
+    }
+
+
+
+    .Your-name-signature{
+        margin-left: 640px;
+    }
+
+    .figures{
+        margin-left: 110px;
+    }
+
+    .black-figure2{
+        width: auto;
+    }
+  
+}
+
+
+@media (max-width: 973px){
+    .Box-container{
+        margin-top: -50px;
+        margin-left: 350px;
+    }
+
+    .metodo-pago{
+        margin-left: 560px;
+    }
+
+    .Your-name-signature{
+        margin-left: 600px;
+    }
+
+    .orange-figure{
+        width: 220px;
+        margin-left:-710px; ;
+    }
 }
 
 
