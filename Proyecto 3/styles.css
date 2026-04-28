@@ -189,7 +189,10 @@ body {
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) 
+    
+
+    {
     .menu {
         padding: 15px;
     }
@@ -215,6 +218,14 @@ body {
     .texto h1 {
         font-size: 32px;
     }
+
+    .contenedor-proyectos{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+
+
 
     .tarjeta {
         height: 10%;
