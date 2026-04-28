@@ -46,7 +46,7 @@ body {
 }
 
 .imagen img {
-    width: 100%;
+    width: 80%;
     margin-left: 50px;
 }
 
@@ -56,12 +56,12 @@ body {
 }
 
 .texto h1 {
-    color: #8613f2;               
+    color: #ff2f00;               
     font-size: 50px;
 }
 
 .texto button {
-    background: #ab13f2;       
+    background: #ff2f00;       
     color: white;
     border: none;
     padding: 10px 20px;
@@ -69,7 +69,7 @@ body {
 }
 
 .sobre-mi {
-    background: #da08ff;          
+    background: #ff2f00;          
     color: white;
     text-align: center;
     padding: 30px;
@@ -91,35 +91,50 @@ body {
     overflow: hidden;
 }
 
-.tarjeta {
-    width: 20%;
-    height: 370px;
-    float: left;
-    margin: 30px;
-    background: white;
-    border: 1px solid #ccc;
-    text-align: center;
-    box-sizing: border-box;
+.tarjeta{
+    width:23%;
+    float:left;
+    margin:1%;
+    background:white;
+    border:1px solid #ccc;
+    text-align:center;
+    box-sizing:border-box;
+    height:430px; 
+    position: relative;
+    padding-bottom:60px; 
+    border-radius: 6px;
 }
+
 
 .tarjeta img {
     width: 100%;
 }
 
-.tarjeta h3 {
-    margin-top: 10px;
+
+.tarjeta p{
+    font-size:14px;
+    color:#6B6969;
+    padding:0 10px;
+    margin-top: -16px;
 }
 
-.tarjeta p {
-    font-size: 14px;
+.tarjeta button{
+    background:#F54927;
+    color:white;
+    border:none;
+    padding:10px 15px;
+    position:absolute;
+    bottom:15px;
+    left:50%;
+    transform:translateX(-50%);
 }
 
-.tarjeta button {
-    background: #c105ff;          
+
+ .Button1 {
+    background: #ff2f00;          
     color: white;
     border: none;
     padding: 10px 15px;
-    margin-top: 10px;
     cursor: pointer;
 }
 
@@ -166,6 +181,7 @@ body {
     }
 
     .tarjeta {
+        height: 420px;
         width: 45%;
         margin: 20px 2.5%;
     }
@@ -199,6 +215,7 @@ body {
     }
 
     .tarjeta {
+        height: 10%;
         width: 90%;
         margin: 10px auto;
     }
@@ -212,24 +229,34 @@ body {
     }
 }
 
-@media screen and (max-width: 480px) {
-    .texto h1 {
-        font-size: 28px;
-    }
+@media (max-width: 300px){
 
-    .texto p {
-        font-size: 16px;
-    }
-
-    .sobre-mi p {
-        font-size: 18px;
-    }
-
-    .sobre-mi img.foto {
-        width: 150px;
-    }
-
-    .tarjeta p {
-        font-size: 14px;
-    }
+    .principal{
+padding:20px 0px;
+max-height: 390px;
 }
+.texto h1{
+font-size:24px;
+}
+
+.texto button{
+font-size:16px;
+padding:8px;
+}
+
+ .tarjeta{
+       width:100%;
+       margin:2%;
+       height:auto;
+       padding-bottom:20px;
+    }
+
+    .tarjeta button{
+        position:static;
+        transform:none;
+        margin-top:10px;
+    }
+
+}
+
+
