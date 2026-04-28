@@ -266,7 +266,7 @@ tfoot tr td{
 }
 
 
-    .Box-container2{
+ .Box-container2{
         display: flex;
         justify-content: space-between;
     }
@@ -285,12 +285,6 @@ tfoot tr td{
     margin-left: 20px;
     margin-top: -10px;
 }
-
-
-.Your-name-signature{
-    
-}
-
 
 .text6{
     margin-left: 20px;
@@ -388,10 +382,6 @@ tfoot tr td{
 
 
 
-    .Your-name-signature{
-        
-    }
-
     .figures{
         margin-left: 110px;
     }
@@ -407,10 +397,6 @@ tfoot tr td{
     .Box-container{
         margin-top: -50px;
         margin-left: 350px;
-    }
-
-    .metodo-pago{
-       
     }
 
     .Your-name-signature{
