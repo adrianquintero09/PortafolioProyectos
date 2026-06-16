@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heladería Artesanal La Vaca Lola | Helados con Onda</title>
+    <!-- Vinculación de las fuentes autorizadas (Máximo 2 familias) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    <!-- Vinculación del archivo de estilos (Estricto en español) -->
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <!-- HEADER / ENCABEZADO (Se maquetará con Flexbox) -->
+    <header class="encabezado-principal">
+        <div class="contenedor-logo">
+            <!-- Espacio para tu logotipo de la vaca con sombrero -->
+            <img src="/imagenes/logo-la-vaca-lola.jpeg" alt="Logotipo La Vaca Lola" class="imagen-logo">
+        </div>
+        <nav class="navegacion-menu">
+            <ul class="lista-enlaces">
+                <li><a href="#sabores">Sabores</a></li>
+                <li><a href="#locales">Locales</a></li>
+                <li><a href="#historia">Nuestra Historia</a></li>
+                <li><a href="#eventos">Eventos</a></li>
+            </ul>
+        </nav>
+        <div class="contenedor-boton-pedido">
+            <a href="#contacto" class="boton-pedir">Pedir Ya</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO / SECCIÓN DE IMPACTO (Se maquetará con Flexbox) -->
+        <section class="seccion-hero">
+            <div class="hero-contenido">
+                <h1 class="hero-titulo">¡Helados con actitud!</h1>
+                <p class="hero-descripcion">
+                    Artesanía pura, sabores rebeldes y las mejores frutas del parche colombiano. 
+                    No somos el helado de tu abuelo (a menos que tu abuelo sea un reacio de primera).
+                </p>
+                <div class="hero-botones">
+                    <a href="#sabores" class="boton-principal">Ver sabores</a>
+                    <a href="#locales" class="boton-secundario">Dónde estamos</a>
+                </div>
+            </div>
+            <div class="hero-imagen-contenedor">
+                <!-- Imagen transparente .png o .webp del cono de helado -->
+                <img src="imagenes/helado-hero.png" alt="Helado con actitud de La Vaca Lola" class="hero-imagen">
+            </div>
+        </section>
+
+        <!-- SECCIÓN DE PREMIOS / PRENSA (Carrusel estático de menciones) -->
+        <section class="seccion-prensa">
+            <div class="marquesina-prensa">
+                <span>⭐ DESTACADOS EN EL TIEMPO</span>
+                <span>⭐ "LOS HELADOS MÁS DISRUPTIVOS" - REVISTA VANGUARDIA</span>
+                <span>⭐ PREMIO A LA INNOVACIÓN LOCAL 2026</span>
+            </div>
+        </section>
+
+        <!-- CATALOGO / "SABORES DEL PARCHE" (Sección obligatoria con CSS Grid) -->
+        <section id="sabores" class="seccion-catalogo">
+            <div class="catalogo-encabezado">
+                <h2 class="titulo-seccion">Sabores del Parche</h2>
+                <p class="subtitulo-seccion">Desde lo clásico hasta lo que te hace decir "¿en serio?". Recetas propias con pura fruta local.</p>
+            </div>
+
+            <!-- El Grid de 12 tarjetas se generará dentro de este contenedor -->
+            <div class="grid-sabores">
+                <!-- Tarjeta 1: Mango Biche con Sal -->
+                <article class="tarjeta-helado">
+                    <div class="tarjeta-imagen">
+                        <img src="imagenes/mango-biche.png" alt="Helado de Mango Biche con Sal">
+                    </div>
+                    <div class="tarjeta-info">
+                        <h3 class="helado-nombre">Mango Biche con Sal</h3>
+                        <p class="helado-descripcion">El clásico de la salida del colegio hecho helado. Ácido, saladito y ultra fresco.</p>
+                        <div class="tarjeta-compras">
+                            <span class="helado-precio">$9.500</span>
+                            <button class="boton-agregar" aria-label="Agregar Mango Biche">+</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Tarjeta 2: Aguacate Chocolate -->
+                <article class="tarjeta-helado">
+                    <div class="tarjeta-imagen">
+                        <img src="imagenes/aguacate-chocolate.png" alt="Helado de Aguacate Chocolate">
+                    </div>
+                    <div class="tarjeta-info">
+                        <h3 class="helado-nombre">Aguacate Chocolate</h3>
+                        <p class="helado-descripcion">Cremoso como nada que hayas probado. Su suavidad te va a volar la mente.</p>
+                        <div class="tarjeta-compras">
+                            <span class="helado-precio">$9.500</span>
+                            <button class="boton-agregar" aria-label="Agregar Aguacate Chocolate">+</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Tarjeta 3: Cerveza Artesanal -->
+                <article class="tarjeta-helado">
+                    <div class="tarjeta-imagen">
+                        <img src="imagenes/cerveza-artesanal.png" alt="Helado de Cerveza Artesanal">
+                    </div>
+                    <div class="tarjeta-info">
+                        <h3 class="helado-nombre">Cerveza Artesanal</h3>
+                        <p class="helado-descripcion">PAra los que prefieren el bar pero con frio</p>
+                        <div class="tarjeta-compras">
+                            <span class="helado-precio">$9.500</span>
+                            <button class="boton-agregar" aria-label="Agregar Cervezz Artesanal">+</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Tarjeta 4: Queso Costeño-Bocadillo -->
+                <article class="tarjeta-helado">
+                    <div class="tarjeta-imagen">
+                        <img src="./imagenes/queso-costeño.png" alt="Helado de Queso Costeño-Bocadillo">
+                    </div>
+                    <div class="tarjeta-info">
+                        <h3 class="helado-nombre">Queso Costeño-Bocadillo</h3>
+                        <p class="helado-descripcion">El matrimonio perfecto. Salado, dulce y muy nuestro</p>
+                        <div class="tarjeta-compras">
+                            <span class="helado-precio">$9.500</span>
+                            <button class="boton-agregar" aria-label="Agregar Queso Costeño-Bocadillo">+</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Tarjeta 5: Lulo-Menta -->
+                <article class="tarjeta-helado">
+                    <div class="tarjeta-imagen">
+                        <img src="imagenes/Lulo-Menta.png" alt="Helado de Lulo-Menta">
+                    </div>
+                    <div class="tarjeta-info">
+                        <h3 class="helado-nombre">Lulo-Menta</h3>
+                        <p class="helado-descripcion">Una explosion citrica que te reinicia el sistema</p>
+                        <div class="tarjeta-compras">
+                            <span class="helado-precio">$9.500</span>
+                            <button class="boton-agregar" aria-label="Agregar Lulo-Menta">+</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Tarjeta 6: Chontaduro -->
+                <article class="tarjeta-helado">
+                    <div class="tarjeta-imagen">
+                        <img src="imagenes/Chontaduro.png" alt="Helado de Chontaduro">
+                    </div>
+                    <div class="tarjeta-info">
+                        <h3 class="helado-nombre">Chontaduro</h3>
+                        <p class="helado-descripcion">El sabor del pacificocon un toque de miel secreto</p>
+                        <div class="tarjeta-compras">
+                            <span class="helado-precio">$9.500</span>
+                            <button class="boton-agregar" aria-label="Agregar Chontaduro">+</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Tarjeta 7: Borojo -->
+                <article class="tarjeta-helado">
+                    <div class="tarjeta-imagen">
+                        <img src="imagenes/Borojo.png" alt="Helado de Borojo">
+                    </div>
+                    <div class="tarjeta-info">
+                        <h3 class="helado-nombre">Borojo</h3>
+                        <p class="helado-descripcion">Energia pura y sabor profundo. El secreto mejor guardado</p>
+                        <div class="tarjeta-compras">
+                            <span class="helado-precio">$9.500</span>
+                            <button class="boton-agregar" aria-label="Agregar Borojo">+</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Tarjeta 8: Vainilla Bourbon -->
+                <article class="tarjeta-helado">
+                    <div class="tarjeta-imagen">
+                        <img src="imagenes/Vainilla-Bourbon.png" alt="Helado de Vainilla Bourbon">
+                    </div>
+                    <div class="tarjeta-info">
+                        <h3 class="helado-nombre">Vainilla Bourbon</h3>
+                        <p class="helado-descripcion">No es la vainilla aburrida de siempre. Es intensa.</p>
+                        <div class="tarjeta-compras">
+                            <span class="helado-precio">$9.500</span>
+                            <button class="boton-agregar" aria-label="Agregar Vainilla Bourbon">+</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Tarjeta 9: Chocolate 70% -->
+                <article class="tarjeta-helado">
+                    <div class="tarjeta-imagen">
+                        <img src="imagenes/chocolate-70.png" alt="Helado de Chocolate 70%">
+                    </div>
+                    <div class="tarjeta-info">
+                        <h3 class="helado-nombre">Chocolate 70%</h3>
+                        <p class="helado-descripcion">Cacao premium santandereano. Solo para adictos.</p>
+                        <div class="tarjeta-compras">
+                            <span class="helado-precio">$9.500</span>
+                            <button class="boton-agregar" aria-label="Agregar Chocolate 70%">+</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Tarjeta 10: Maracuya-->
+                <article class="tarjeta-helado">
+                    <div class="tarjeta-imagen">
+                        <img src="imagenes/Maracuya.png" alt="Helado de Maracuya">
+                    </div>
+                    <div class="tarjeta-info">
+                        <h3 class="helado-nombre">Maracuya</h3>
+                        <p class="helado-descripcion">Acidez perfecta para los dias de calor en "Buca".</p>
+                        <div class="tarjeta-compras">
+                            <span class="helado-precio">$9.500</span>
+                            <button class="boton-agregar" aria-label="Agregar Maracuya">+</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Tarjeta 11: Cafe del Huila -->
+                <article class="tarjeta-helado">
+                    <div class="tarjeta-imagen">
+                        <img src="imagenes/Cafe-del-Huila.png" alt="Helado de Cafe del Huila">
+                    </div>
+                    <div class="tarjeta-info">
+                        <h3 class="helado-nombre">Cafe del Huila</h3>
+                        <p class="helado-descripcion">Directo del campo al cono. Un boost necesario.</p>
+                        <div class="tarjeta-compras">
+                            <span class="helado-precio">$9.500</span>
+                            <button class="boton-agregar" aria-label="Agregar Cafe del Huila">+</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Tarjeta 12: Coco-Arequipe -->
+                <article class="tarjeta-helado">
+                    <div class="tarjeta-imagen">
+                        <img src="imagenes/Coco-Arequipe.png" alt="Helado de Coco-Arequipe">
+                    </div>
+                    <div class="tarjeta-info">
+                        <h3 class="helado-nombre">Coco-Arequipe</h3>
+                        <p class="helado-descripcion">Como una cocada pero mejor. Textura increible.</p>
+                        <div class="tarjeta-compras">
+                            <span class="helado-precio">$9.500</span>
+                            <button class="boton-agregar" aria-label="Agregar Coco-Arequipe">+</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- SABOR DEL MES DESTACADO -->
+        <section class="seccion-destacado">
+            <div class="destacado-imagen">
+                <img src="imagenes/destacado-aguacate.png" alt="Sabor destacado del mes">
+            </div>
+            <div class="destacado-contenido">
+                <span class="etiqueta-destacado">EL REY DEL MES</span>
+                <h2 class="titulo-destacado">Aguacate & Chocolate</h2>
+                <p class="descripcion-destacado">
+                    Nuestra creación más polémica y amada. La cremosidad natural del aguacate hassan se funde con chocolate al 70% de origen local. No es un helado, es una declaración de principios.
+                </p>
+                <div class="destacado-barra-votos">
+                    <p>Aprobado por +700 curiosos este mes</p>
+                </div>
+                <a href="#contacto" class="boton-destacado">Quiero probarlo ya</a>
+            </div>
+        </section>
+
+        <!-- NUESTRA HISTORIA / LAS HERMANAS LOLA -->
+        <section id="historia" class="seccion-historia">
+            <div class="historia-contenido">
+                <h2 class="titulo-seccion">Las Hermanas Lola</h2>
+                <p class="texto-historia">
+                    María José y Sofía Galvis querían hacer helados convencionales... Hasta que se dieron cuenta de que Bucaramanga, su clima y su gente merecían algo con más actitud. Rompieron la receta tradicional y crearon un lugar donde el apoyo al productor local se mezcla con sabores que desafían la lógica.
+                </p>
+                <blockquote class="frase-destacada">
+                    "El helado es el lienzo perfecto para jugar con lo que somos: una tierra vibrante, diversa y no convencional."
+                </blockquote>
+            </div>
+            <div class="historia-imagen-contenedor">
+                <img src="imagenes/hermanas-galvis.png" alt="María José y Sofía Galvis" class="foto-hermanas">
+            </div>
+        </section>
+
+        <!-- LOCALES Y EVENTOS (Fila compartida con Flexbox) -->
+        <div class="bloque-mixto">
+            <!-- Locales (Mínimo 2 en Bucaramanga) -->
+            <section id="locales" class="subseccion-locales">
+                <h2 class="titulo-seccion-pequeno">Dónde Estamos</h2>
+                <div class="tarjeta-local">
+                    <h3>Cabecera [El Búnker]</h3>
+                    <p>Calle 48 # 32-10</p>
+                    <p>Lun - Jue: 11:00 AM - 9:00 PM</p>
+                    <p>Vie - Dom: 11:00 AM - 10:00 PM</p>
+                </div>
+                <div class="tarjeta-local">
+                    <h3>Cañaveral [El Kiosko]</h3>
+                    <p>Centro Comercial Cañaveral - Pasillo Central</p>
+                    <p>Todos los días: 10:00 AM - 8:30 PM</p>
+                </div>
+            </section>
+
+            <!-- Eventos y Catering -->
+            <section id="eventos" class="subseccion-eventos">
+                <h2 class="titulo-seccion-pequeno">Eventos & Catering</h2>
+                <p class="texto-eventos">
+                    Llevamos la actitud de La Vaca Lola a tus eventos. Cumpleaños, matrimonios o empresariales... Cualquier ocasión es perfecta para romper la rutina culinaria.
+                </p>
+                <ul class="lista-eventos">
+                    <li>⚡ Matrimonios con estilo</li>
+                    <li>⚡ Cumpleaños épicos</li>
+                    <li>⚡ Corporativos diferentes</li>
+                </ul>
+                <a href="#contacto" class="boton-principal">Cotizar Evento</a>
+            </section>
+        </div>
+
+        <!-- FORMULARIO DE CONTACTO PARA PEDIDOS / EVENTOS -->
+        <section id="contacto" class="seccion-contacto">
+            <div class="contacto-encabezado">
+                <h2 class="titulo-seccion">Escríbenos</h2>
+                <p class="subtitulo-seccion">¿Quieres un sabor personalizado, un pedido grande o cotizar un evento? Suelta el dato.</p>
+            </div>
+            <form class="formulario-contacto" action="#" method="POST">
+                <div class="grupo-formulario">
+                    <label for="campo-nombre">¿Cómo te llamas?</label>
+                    <input type="text" id="campo-nombre" name="nombre" required placeholder="Tu nombre aquí">
+                </div>
+                <div class="grupo-formulario">
+                    <label for="campo-necesidad">¿Qué necesitas?</label>
+                    <select id="campo-necesidad" name="necesidad">
+                        <option value="evento">Cotizar un Evento</option>
+                        <option value="especial">Pedido Especial / Mayorista</option>
+                        <option value="felicitacion">Chisme o Felicitación</option>
+                    </select>
+                </div>
+                <div class="grupo-formulario">
+                    <label for="campo-mensaje">Mensaje</label>
+                    <textarea id="campo-mensaje" name="mensaje" rows="5" required placeholder="Cuéntanos todo el plan..."></textarea>
+                </div>
+                <button type="submit" class="boton-formulario">Enviar Mensaje</button>
+            </form>
+        </section>
+
+        <!-- SECCIÓN DE VIDEOS EL PARCHE (OBLIGACIÓN: CSS GRID) -->
+        <section id="videos" class="seccion-videos">
+            <div class="videos-encabezado">
+                <h2 class="titulo-seccion">La Vaca Lola en redes</h2>
+                <p class="subtitulo-seccion">Pura onda en TikTok e Instagram. Antójate con nuestros procesos y locuras.</p>
+            </div>
+
+            <!-- Contenedor Grid para los 4 videos -->
+            <div class="grid-videos">
+                
+                <!-- Video 1 -->
+                <article class="tarjeta-video">
+                    <div class="contenedor-reproductor">
+                        <!-- Reemplaza 'video-tiktok-1.mp4' con tus archivos reales -->
+                        <video src="./imagenes/1.mp4" controls poster="./imagenes/1miniatura.png" muted></video>
+                    </div>
+                    <div class="video-info">
+                        <h3>Detrás del sabor 🥑</h3>
+                        <p>¿Cómo carajos logramos que el helado de aguacate sepa tan brutal?</p>
+                    </div>
+                </article>
+
+                <!-- Video 2 -->
+                <article class="tarjeta-video">
+                    <div class="contenedor-reproductor">
+                        <video src="./imagenes/2.mp4" controls poster="./imagenes/2miniatura.png" muted></video>
+                    </div>
+                    <div class="video-info">
+                        <h3>Retando a Bucaramanga 🌶️</h3>
+                        <p>Pusimos a prueba a los más valientes con mezclas inesperadas.</p>
+                    </div>
+                </article>
+
+                <!-- Video 3 -->
+                <article class="tarjeta-video">
+                    <div class="contenedor-reproductor">
+                        <video src="./imagenes/3.mp4" controls poster="./imagenes/3miniatura.png" muted></video>
+                    </div>
+                    <div class="video-info">
+                        <h3>Puro queso costeño 🧀</h3>
+                        <p>El secreto detrás de nuestro helado más amado y saladito.</p>
+                    </div>
+                </article>
+
+                <!-- Video 4 -->
+                <article class="tarjeta-video">
+                    <div class="contenedor-reproductor">
+                        <video src="video-tiktok-4.mp4" controls poster="miniatura-4.jpg" muted></video>
+                    </div>
+                    <div class="video-info">
+                        <h3>¡Lanzamiento del mes! 🚀</h3>
+                        <p>Acompaña a las hermanas Lola en la creación de la nueva locura.</p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER / PIE DE PÁGINA (Redes sociales y links) -->
+    <footer class="pie-pagina">
+        <div class="footer-bloque">
+            <h2 class="logo-texto-footer">LA VACA LOLA</h2>
+            <p class="derechos-texto">© 2026 - Hecho con pura onda local.</p>
+        </div>
+        <div class="footer-bloque">
+            <h3>Síguenos en el parche</h3>
+            <div class="enlaces-redes">
+                <!-- Iconos representados por texto o SVG nativo en el CSS -->
+                <a href="https://instagram.com" target="_blank" class="red-social">Instagram</a>
+                <a href="https://tiktok.com" target="_blank" class="red-social">TikTok</a>
+            </div>
+        </div>
+        <div class="footer-bloque">
+            <h3>Legales</h3>
+            <ul class="lista-legales">
+                <li><a href="#">Términos y Condiciones</a></li>
+                <li><a href="#">Política de Privacidad</a></li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+</html>
