@@ -1,0 +1,625 @@
+/* CONFIGURACIÓN GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'DM Sans', sans-serif;
+}
+
+body {
+    background-color: #000000;
+    color: #292930;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* NAVBAR */
+
+.sign-up{
+    height: 20px;
+}
+
+
+.navbar {
+    border-bottom: 1px solid #D12128;
+    padding: 20px 0;
+    background: #000000;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #292930;
+}
+
+.logo-e {
+    color: #D12128;
+}
+
+.nav-links a {
+    margin: 0 15px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #292930;
+}
+
+.nav-links i {
+    font-size: 10px;
+    margin-left: 2px;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.search-bar {
+    position: relative;
+    background: #f5f5f7;
+    border-radius: 6px;
+    padding: 8px 15px;
+    display: flex;
+    align-items: center;
+}
+
+.search-bar i {
+    color: #777;
+    margin-right: 10px;
+}
+
+.search-bar input {
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: 14px;
+    width: 200px;
+}
+
+.icon-buttons {
+    display: flex;
+    gap: 15px;
+    font-size: 18px;
+}
+
+.cart-icon {
+    position: relative;
+}
+
+.badge {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background: #D12128;
+    color: #fff;
+    font-size: 10px;
+    padding: 2px 5px;
+    border-radius: 50%;
+}
+
+/* MAIN CONTENT LAYOUT */
+.main-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 15px;
+}
+
+.breadcrumb {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.breadcrumb span {
+    color: #D12128;
+}
+
+.page-title {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.shop-layout {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 40px;
+}
+
+/* SIDEBAR FILTERS */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.filter-section {
+    border-bottom: 1px solid #D12128;
+    padding-bottom: 20px;
+}
+
+.filter-section h3 {
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    color: #292930;
+}
+
+.filter-section ul {
+    list-style: none;
+}
+
+.filter-section ul li {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #777;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.color-dots {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+.dot.active {
+    outline: 2px solid #D12128;
+    outline-offset: 2px;
+}
+
+.red { background: #ff4136; }
+.black { background: #111111; }
+.pink { background: #ff851b; }
+.light-blue { background: #7fdbff; }
+.yellow { background: #ffdc00; }
+.blue { background: #0074d9; }
+
+.size-box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.size-box {
+    border: 1px solid #e3e3e3;
+    padding: 6px 12px;
+    font-size: 12px;
+    border-radius: 4px;
+    color: #777;
+    cursor: pointer;
+}
+
+.price-inputs {
+    height: 100px;
+}
+
+.price-inputs input {
+    border: 1px solid #e3e3e3;
+    padding: 8px;
+    text-align: center;
+    font-size: 12px;
+    color: #777;
+    border-radius: 4px;
+}
+
+.btn-reset {
+    width: 100%;
+    background: #D12128;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* PRODUCT GRID */
+.products-content {
+    border-color: red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.products-grid {
+    border-color: #D12128;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    width: 100%;
+}
+
+.product-card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.image-container {
+    background: #f6f7fb;
+    position: relative;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    min-height: 240px;
+}
+
+.image-container img {
+    max-width: 100%;
+    mix-blend-mode: multiply;
+}
+
+.discount-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #D12128;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.product-info {
+    padding: 15px 0;
+}
+
+.product-name {
+    font-size: 15px;
+    font-weight: 500;
+    color: #292930;
+    margin-bottom: 8px;
+}
+
+.price {
+    font-size: 16px;
+    font-weight: 700;
+    color: #292930;
+    display: flex;
+    gap: 10px;
+}
+
+.old-price {
+    color: #d1d1d1;
+    text-decoration: line-through;
+    font-weight: 400;
+}
+
+.product-colors {
+    display: flex;
+    gap: 6px;
+    margin-top: 10px;
+}
+
+.p-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+.color-1 { background: #ff4136; }
+.color-2 { background: #111; }
+.color-3 { background: #3577f0; }
+
+.load-more-container {
+    margin-top: 40px;
+}
+
+.btn-load-more {
+    background: #f6f7fb;
+    color: #777;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* NEWSLETTER */
+.newsletter-banner {
+    background-color: #D12128;
+    background-image: url('https://via.placeholder.com/1200x300?text=Gadgets+Background'); /* Simulación de los relojes de fondo */
+    background-size: cover;
+    background-position: center;
+    padding: 60px 0;
+    text-align: left;
+    margin-top: 60px;
+}
+
+.newsletter-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.newsletter-tag {
+    color: #3577f0;
+    font-weight: 700;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.newsletter-content h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.subscribe-form {
+    display: flex;
+    gap: 10px;
+    max-width: 450px;
+    margin-bottom: 15px;
+}
+
+.subscribe-form input {
+    flex: 1;
+    padding: 15px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.subscribe-form button {
+    background: #292930;
+    color: #fff;
+    border: none;
+    padding: 0 30px;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.promo-link {
+    font-size: 12px;
+    color: #777;
+}
+
+/* FEATURES BAR */
+.features-bar {
+    max-width: 1200px;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 0 15px;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.feature-item i {
+    font-size: 28px;
+    color: #292930;
+}
+
+.feature-item h4 {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.feature-item p {
+    font-size: 12px;
+    color: #777;
+}
+
+/* FOOTER */
+.footer {
+    border-top: 1px solid #D12128;
+    padding: 60px 0 30px 0;
+    font-size: 14px;
+    color: #777;
+}
+
+.footer-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    padding: 0 15px;
+}
+
+.footer-col h3 {
+    color: #292930;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.footer-col p {
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.contact-info i {
+    margin-right: 8px;
+}
+
+.app-promo {
+    margin-bottom: 15px;
+}
+
+.app-download-area {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.app-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.store-btn {
+    background: #D12128;
+    color: #292930;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 40px auto 0 auto;
+    border-top: 1px solid #D12128;
+    padding: 20px 15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-icons a {
+    margin-right: 15px;
+    color: #777;
+    font-size: 16px;
+}
+
+.payment-methods {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.payment-methods i {
+    font-size: 24px;
+    color: #292930;
+}
+
+/* ==========================================================================
+   DISEÑO RESPONSIVO (AÑADIDO AL FINAL SIN MODIFICAR LO ANTERIOR)
+   ========================================================================== */
+
+/* --- TABLETS Y PANTALLAS MEDIANAS (Menos de 992px) --- */
+@media (max-width: 992px) {
+    .shop-layout {
+        grid-template-columns: 1fr; /* Coloca la barra de filtros arriba y los productos abajo */
+        gap: 30px;
+    }
+
+    .sidebar {
+        flex-direction: row; /* Coloca las secciones de filtros una al lado de la otra si caben */
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .filter-section {
+        flex: 1 1 200px; /* Hace que los bloques de filtros se distribuyan equitativamente */
+    }
+
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr); /* Pasa de 3 columnas de productos a solo 2 */
+    }
+
+    .features-bar {
+        grid-template-columns: repeat(2, 1fr); /* Los 4 beneficios se dividen en un diseño de 2x2 */
+        gap: 30px;
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr); /* El footer se divide en 2 columnas */
+    }
+}
+
+/* --- TELÉFONOS MÓVILES (Menos de 768px) --- */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Oculta el menú de texto para evitar que se desborde la barra superior */
+    }
+
+    .navbar {
+        padding: 10px 0;
+    }
+
+    .search-bar input {
+        width: 120px; /* Reduce el tamaño del buscador para que quepa en pantallas chicas */
+    }
+
+    .page-title {
+        font-size: 28px; /* Título un poco más pequeño para celulares */
+        margin-bottom: 25px;
+    }
+
+    .sidebar {
+        flex-direction: column; /* En celulares los filtros vuelven a estar uno abajo del otro */
+    }
+
+    .products-grid {
+        grid-template-columns: 1fr; /* Los productos se ven a una sola columna (pantalla completa) */
+    }
+
+    .subscribe-form {
+        flex-direction: column; /* El campo de correo y el botón se apilan verticalmente */
+    }
+
+    .subscribe-form button {
+        padding: 15px; /* Le da altura al botón de suscripción ya que ahora está abajo */
+    }
+
+    .features-bar {
+        grid-template-columns: 1fr; /* Los beneficios se muestran uno abajo del otro */
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr; /* Cada sección del footer toma todo el ancho del celular */
+        gap: 25px;
+    }
+
+    .footer-bottom {
+        flex-direction: column; /* Alinea las redes, derechos y pagos en una sola fila vertical */
+        gap: 15px;
+        text-align: center;
+    }
+
+    .social-icons {
+        margin-bottom: 5px;
+    }
+}
