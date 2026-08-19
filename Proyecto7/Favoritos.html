@@ -1,0 +1,232 @@
+ <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador de Usuarios y Favoritos</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #eef2f5;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .main-layout {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .column {
+            flex: 1;
+            min-width: 300px;
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .btn {
+            width: 100%;
+            padding: 10px;
+            font-size: 1rem;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-bottom: 15px;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        .btn-fav {
+            background-color: #28a745;
+            margin-top: 10px;
+        }
+
+        .btn-fav:hover {
+            background-color: #218838;
+        }
+
+        .btn-danger {
+            background-color: #dc3545;
+            margin-top: 10px;
+        }
+
+        .btn-danger:hover {
+            background-color: #c82333;
+        }
+
+        .user-card {
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+            background: #fafafa;
+        }
+
+        .user-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 10px;
+        }
+
+        .user-header img {
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+        }
+
+        .info-item {
+            font-size: 0.88rem;
+            color: #555;
+            margin: 4px 0;
+        }
+
+        .empty-msg {
+            text-align: center;
+            color: #888;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Gestor de Usuarios Random</h1>
+
+    <div class="main-layout">
+        <!-- Columna para explorar usuarios aleatorios -->
+        <div class="column">
+            <h2>Usuario Actual</h2>
+            <button class="btn" onclick="obtenerNuevoUsuario()">Cargar Otro Usuario</button>
+            <div id="usuario-actual"></div>
+        </div>
+
+        <!-- Columna para ver y gestionar la lista de favoritos -->
+        <div class="column">
+            <h2>Mis Favoritos</h2>
+            <div id="lista-favoritos"></div>
+        </div>
+    </div>
+
+    <script>
+        let usuarioGuardadoTemporal = null;
+
+        // Cargar favoritos guardados en el navegador al iniciar la página
+        let favoritos = JSON.parse(localStorage.getItem('mis_favoritos_randomuser')) || [];
+
+        async function obtenerNuevoUsuario() {
+            try {
+                const respuesta = await fetch('https://randomuser.me/api/');
+                const datos = await respuesta.json();
+                usuarioGuardadoTemporal = datos.results[0];
+                renderizarUsuarioActual();
+            } catch (error) {
+                console.error('Error al obtener usuario:', error);
+            }
+        }
+
+        function renderizarUsuarioActual() {
+            const contenedor = document.getElementById('usuario-actual');
+            const user = usuarioGuardadoTemporal;
+
+            if (!user) return;
+
+            // Comprobar si ya es favorito
+            const yaEsFavorito = favoritos.some(fav => fav.login.uuid === user.login.uuid);
+
+            contenedor.innerHTML = `
+                <div class="user-card">
+                    <div class="user-header">
+                        <img src="${user.picture.large}" alt="Avatar">
+                        <div>
+                            <strong>${user.name.first} ${user.name.last}</strong><br>
+                            <small>${user.location.city}, ${user.location.country}</small>
+                        </div>
+                    </div>
+                    <div class="info-item"><strong>Email:</strong> ${user.email}</div>
+                    <div class="info-item"><strong>Teléfono:</strong> ${user.phone}</div>
+                    <div class="info-item"><strong>Edad:</strong> ${user.dob.age} años</div>
+                    <div class="info-item"><strong>Usuario:</strong> ${user.login.username}</div>
+                    
+                    <button class="btn ${yaEsFavorito ? 'btn-danger' : 'btn-fav'}" 
+                            onclick="${yaEsFavorito ? `eliminarDeFavoritos('${user.login.uuid}')` : 'agregarAFavoritos()'}">
+                        ${yaEsFavorito ? 'Quitar de Favoritos' : '⭐ Guardar en Favoritos'}
+                    </button>
+                </div>
+            `;
+        }
+
+        function agregarAFavoritos() {
+            if (!usuarioGuardadoTemporal) return;
+            
+            // Agregar al arreglo
+            favoritos.push(usuarioGuardadoTemporal);
+            
+            // Guardar en localStorage
+            guardarEnStorage();
+
+            // Actualizar ambas vistas
+            renderizarUsuarioActual();
+            renderizarFavoritos();
+        }
+
+        function eliminarDeFavoritos(uuid) {
+            // Filtrar para quitar el seleccionado
+            favoritos = favoritos.filter(fav => fav.login.uuid !== uuid);
+
+            // Guardar en localStorage
+            guardarEnStorage();
+
+            // Actualizar ambas vistas
+            if (usuarioGuardadoTemporal) renderizarUsuarioActual();
+            renderizarFavoritos();
+        }
+
+        function guardarEnStorage() {
+            localStorage.setItem('mis_favoritos_randomuser', JSON.stringify(favoritos));
+        }
+
+        function renderizarFavoritos() {
+            const contenedor = document.getElementById('lista-favoritos');
+
+            if (favoritos.length === 0) {
+                contenedor.innerHTML = '<p class="empty-msg">No has guardado ningún favorito aún.</p>';
+                return;
+            }
+
+            contenedor.innerHTML = favoritos.map(user => `
+                <div class="user-card">
+                    <div class="user-header">
+                        <img src="${user.picture.thumbnail}" alt="Avatar">
+                        <div>
+                            <strong>${user.name.first} ${user.name.last}</strong><br>
+                            <small>${user.email}</small>
+                        </div>
+                    </div>
+                    <button class="btn btn-danger" onclick="eliminarDeFavoritos('${user.login.uuid}')">
+                        Eliminar
+                    </button>
+                </div>
+            `).join('');
+        }
+
+        // Cargar un usuario e inicializar la lista de favoritos al cargar la página
+        obtenerNuevoUsuario();
+        renderizarFavoritos();
+    </script>
+
+</body>
+</html>

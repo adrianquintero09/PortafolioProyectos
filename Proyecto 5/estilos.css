@@ -189,6 +189,7 @@ a {
   height: auto;
   position: relative;
   z-index: 2;
+  border-radius: 25px;
 }
 
 /* ==========================================================================
@@ -280,6 +281,7 @@ a {
 .tarjeta-imagen img {
   max-height: 100%;
   object-fit: contain;
+  border-radius: 25px;
 }
 
 .tarjeta-info {
@@ -369,6 +371,7 @@ a {
 .destacado-imagen img {
   max-width: 80%;
   height: auto;
+  border-radius: 25px;
 }
 
 .destacado-contenido {
